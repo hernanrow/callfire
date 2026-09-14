@@ -51,6 +51,44 @@ carpeta a publicar es la raíz.
 Cuando haya dominio propio, se apunta desde el panel del proveedor y se agrega
 un archivo `CNAME` con el dominio si se usa GitHub Pages.
 
+## SEO
+
+Lo que está hecho en el código:
+
+- `title` y `description` con el servicio y la localidad, dentro del largo que
+  Google muestra sin cortar.
+- **Datos estructurados** (`application/ld+json`, tipo `ProfessionalService`)
+  con teléfono, correo, localidad, zona de trabajo y el catálogo de servicios y
+  cursos. Es lo que le permite a Google entender que esto es una empresa local
+  y armar su ficha. Se puede revisar en
+  [search.google.com/test/rich-results](https://search.google.com/test/rich-results).
+- `sitemap.xml` y `robots.txt` apuntándose entre sí.
+- Open Graph con imagen de 1200×630 y URL absoluta, para la vista previa al
+  compartir por WhatsApp o redes.
+- HTML semántico, un solo `h1`, `alt` en todas las imágenes, `lang="es-AR"`.
+
+**Lo que el código no puede hacer**, y pesa más que todo lo anterior para que
+los encuentren en la zona:
+
+1. **Perfil de Empresa en Google** (el que aparece en Maps y en el panel de la
+   derecha). Es gratis, se hace en `google.com/business` y para una empresa
+   local es lo que más mueve la aguja.
+2. **Google Search Console**: dar de alta el sitio y enviar el `sitemap.xml`.
+3. **Dominio propio.** Un subdirectorio de `github.io` posiciona bastante peor
+   que un dominio.
+4. **Tiempo y contenido.** Un sitio nuevo no aparece de un día para el otro.
+
+## Cuando haya dominio propio
+
+Hay cuatro lugares con la dirección escrita completa que hay que actualizar:
+
+- `index.html`: `canonical`, `og:url` y `og:image`
+- `index.html`: las claves `url`, `logo` e `image` del bloque JSON-LD
+- `sitemap.xml`: la etiqueta `loc`
+- `robots.txt`: la línea `Sitemap:`
+
+Y agregar un archivo `CNAME` con el dominio, si se sigue usando GitHub Pages.
+
 ## Pendientes antes de publicar
 
 - [ ] **Redes sociales.** En `index.html`, dentro de `<ul class="redes">`, los

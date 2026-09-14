@@ -4,8 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CALL FIRE | Seguridad e Higiene en Villa Constitución, Santa Fe</title>
-<meta name="description" content="Ayudamos a empresas a prevenir accidentes, capacitar a sus equipos y cumplir con las exigencias de seguridad e higiene. Capacitaciones, mediciones, simulacros y documentación técnica en Villa Constitución y zona.">
-<link rel="canonical" href="/">
+<meta name="description" content="Seguridad e higiene laboral en Villa Constitución, Santa Fe. Capacitaciones, mediciones de luz y ruido, simulacros y documentación técnica para empresas.">
+
+<!-- IMPORTANTE: estas tres direcciones son absolutas a propósito (las redes y
+     Google las necesitan completas). Cuando haya dominio propio hay que
+     cambiarlas acá y en sitemap.xml: canonical, og:url y og:image. -->
+<link rel="canonical" href="https://hernanrow.github.io/callfire/">
 
 <!-- Iconos -->
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
@@ -20,13 +24,56 @@
 <meta property="og:site_name" content="CALL FIRE">
 <meta property="og:title" content="CALL FIRE | Seguridad e Higiene">
 <meta property="og:description" content="Seguridad e higiene que se lleva a la práctica. Capacitaciones, mediciones, simulacros y documentación técnica.">
-<meta property="og:image" content="assets/img/og-image.png">
+<meta property="og:url" content="https://hernanrow.github.io/callfire/">
+<meta property="og:image" content="https://hernanrow.github.io/callfire/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/fondo-landing.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "CALL FIRE",
+  "alternateName": "CALL FIRE Seguridad e Higiene",
+  "description": "Capacitación y servicios de seguridad e higiene laboral para empresas: mediciones de luz y ruido, simulacros de evacuación, control de equipos de extinción y documentación técnica.",
+  "slogan": "Seguridad e higiene que se lleva a la práctica.",
+  "url": "https://hernanrow.github.io/callfire/",
+  "logo": "https://hernanrow.github.io/callfire/assets/img/logo.svg",
+  "image": "https://hernanrow.github.io/callfire/assets/img/og-image.png",
+  "telephone": "+5493364564114",
+  "email": "callfire.seh@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Villa Constitución",
+    "addressRegion": "Santa Fe",
+    "addressCountry": "AR"
+  },
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Villa Constitución y alrededores, Santa Fe, Argentina"
+  },
+  "knowsLanguage": "es-AR",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios y capacitaciones",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mediciones de luz y ruido" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Simulacros y planes de evacuación" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Control de equipos de extinción" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Informes y legajos técnicos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "The City Day — Respuesta ante emergencias" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Squad 3 — Supervivencia y respuesta táctica" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Seguridad laboral — Seguridad en el trabajo" } }
+    ]
+  }
+}
+</script>
+
 <link rel="stylesheet" href="assets/css/styles.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -509,7 +556,7 @@
   <div class="contenedor pie__interior" data-anim-hijos="subir">
     <div class="pie__marca">
       <img src="assets/img/logo-negativo.svg" alt="CALL FIRE — Seguridad e Higiene"
-           width="1015" height="855">
+           width="1015" height="855" loading="lazy" decoding="async">
       <p class="pie__lema">Seguridad e higiene que se lleva a la práctica.</p>
       <p>Villa Constitución, Santa Fe.</p>
     </div>
