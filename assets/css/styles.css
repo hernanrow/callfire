@@ -150,7 +150,15 @@ a:hover{ text-decoration:underline; }
 /* ────────────────────────────────── hero ─────────────────────────────────── */
 .hero{
   position:relative; overflow:hidden;
-  background:#E9ECEF url('../img/fondo-landing.jpg') no-repeat 65% center / cover;
+  background-color:#E9ECEF;
+  background-repeat:no-repeat;
+  background-position:65% center;
+  background-size:cover;
+  /* La primera línea es el respaldo: los navegadores viejos se quedan con el
+     JPG. Los que entienden image-set() bajan el WebP, que pesa la mitad. */
+  background-image:url('../img/fondo-landing-1920.jpg');
+  background-image:image-set(url('../img/fondo-landing-1920.webp') type('image/webp'),
+                             url('../img/fondo-landing-1920.jpg') type('image/jpeg'));
   /* la cabecera es fija: el padding de arriba la compensa y deja el texto cerca */
   padding:calc(var(--alto-cabecera) + 40px) 0 clamp(48px,6vw,76px);
   min-height:clamp(460px,74vh,600px);
@@ -281,7 +289,13 @@ a:hover{ text-decoration:underline; }
 /* ─────────────────────────────── crossover ───────────────────────────────── */
 .crossover{
   position:relative; overflow:hidden; color:#C3C9D1;
-  background:var(--negro) url('../img/fondo-crossover.jpg') no-repeat center center / cover;
+  background-color:var(--negro);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  background-image:url('../img/fondo-crossover-1920.jpg');
+  background-image:image-set(url('../img/fondo-crossover-1920.webp') type('image/webp'),
+                             url('../img/fondo-crossover-1920.jpg') type('image/jpeg'));
   padding:clamp(60px,8vw,104px) 0;
 }
 .crossover::before{                       /* la foto es oscura: el velo solo
@@ -486,7 +500,17 @@ a.dato:hover{ border-color:var(--rojo); text-decoration:none; background:#fff; }
 }
 
 @media (max-width:860px){
-  .hero{ background-position:60% center; }
+  .hero{
+    background-position:60% center;
+    background-image:url('../img/fondo-landing-1080.jpg');
+    background-image:image-set(url('../img/fondo-landing-1080.webp') type('image/webp'),
+                               url('../img/fondo-landing-1080.jpg') type('image/jpeg'));
+  }
+  .crossover{
+    background-image:url('../img/fondo-crossover-1080.jpg');
+    background-image:image-set(url('../img/fondo-crossover-1080.webp') type('image/webp'),
+                               url('../img/fondo-crossover-1080.jpg') type('image/jpeg'));
+  }
   .hero::before{
     background:linear-gradient(180deg,
       rgba(255,255,255,.94) 0%, rgba(255,255,255,.9) 55%, rgba(255,255,255,.82) 100%);

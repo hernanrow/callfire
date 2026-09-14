@@ -33,7 +33,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/img/fondo-landing.jpg">
+<!-- Precarga de la foto del hero, que es lo primero que se ve.
+     type= : solo la baja quien soporta WebP.
+     media=: cada pantalla precarga el tamaño que realmente va a usar, si no el
+             celular se bajaba las dos versiones y desperdiciaba 44 KB. -->
+<link rel="preload" as="image" href="assets/img/fondo-landing-1920.webp" type="image/webp"
+      media="(min-width: 861px)">
+<link rel="preload" as="image" href="assets/img/fondo-landing-1080.webp" type="image/webp"
+      media="(max-width: 860px)">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

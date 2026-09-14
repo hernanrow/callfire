@@ -78,16 +78,49 @@ los encuentren en la zona:
    que un dominio.
 4. **Tiempo y contenido.** Un sitio nuevo no aparece de un día para el otro.
 
+## Las fotos de fondo
+
+Cada una existe en cuatro archivos: **WebP y JPG**, en **1920 y 1080** de ancho.
+
+- El WebP pesa la mitad que el JPG. El JPG está solo como respaldo para
+  navegadores viejos, y se declara primero en el CSS para que el que no entienda
+  `image-set()` se quede con él.
+- La de 1920 cubre monitores grandes y el zoom hacia atrás del navegador; la de
+  1080 se usa por debajo de 860 px de ancho.
+- El `<link rel="preload">` del hero está duplicado con `media=`, uno por
+  tamaño. Si se saca ese `media`, el celular se baja las dos versiones.
+
+En escritorio el visitante baja 92 KB de fotos; en celular, 44 KB.
+
+**Si se reemplaza alguna foto** hay que volver a generar las cuatro variantes con
+los mismos nombres, y revisar el velo de esa sección (`.hero::before` o
+`.crossover::before`), que está calibrado para la foto actual.
+
 ## Cuando haya dominio propio
 
-Hay cuatro lugares con la dirección escrita completa que hay que actualizar:
+La dirección completa aparece en ocho lugares repartidos en tres archivos.
+Para no buscarlos a mano está `cambiar-dominio.py`:
 
-- `index.html`: `canonical`, `og:url` y `og:image`
-- `index.html`: las claves `url`, `logo` e `image` del bloque JSON-LD
-- `sitemap.xml`: la etiqueta `loc`
-- `robots.txt`: la línea `Sitemap:`
+```bash
+python cambiar-dominio.py https://callfire.com.ar/ --simular   # ver qué cambiaría
+python cambiar-dominio.py https://callfire.com.ar/             # aplicarlo
+```
 
-Y agregar un archivo `CNAME` con el dominio, si se sigue usando GitHub Pages.
+Después: `git add -A && git commit -m "Dominio propio" && git push`.
+
+**No conviene correrlo antes de que el dominio esté andando.** Si el `canonical`
+apunta a una dirección que todavía no responde, Google intenta indexar algo que
+no existe.
+
+Lo que falta hacer fuera del código:
+
+1. Registrar el dominio en NIC.ar (hace falta CUIT).
+2. Agregar el dominio en Cloudflare y cambiar los *nameservers* desde NIC.ar,
+   en la sección *Delegaciones*.
+3. Agregar el dominio en el proyecto de Cloudflare Pages. El certificado HTTPS
+   se genera solo.
+4. En Google Search Console, dar de alta el dominio nuevo y volver a enviar el
+   `sitemap.xml`.
 
 ## Pendientes antes de publicar
 
