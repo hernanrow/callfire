@@ -1,0 +1,6 @@
+# Archivos del repositorio que no son parte del sitio y no hace falta publicar.
+README.md
+cambiar-dominio.py
+wrangler.toml
+.assetsignore
+.gitignore

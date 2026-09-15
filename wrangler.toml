@@ -1,0 +1,11 @@
+# Configuración para desplegar en Cloudflare.
+#
+# Esto NO es un Worker con código: es un sitio estático. El bloque [assets] le
+# dice a Cloudflare que sirva los archivos de esta carpeta tal cual, sin
+# ejecutar nada. Por eso no hay "main" ni script de entrada.
+
+name = "callfire"
+compatibility_date = "2026-09-15"
+
+[assets]
+directory = "./"
