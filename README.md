@@ -1,6 +1,6 @@
 # Sitio web de CALL FIRE
 
-Sitio estático de una sola página para **CALL FIRE — Seguridad e Higiene**
+Sitio estático de una sola página para **CALL FIRE — Higiene y Seguridad Laboral**
 (Villa Constitución, Santa Fe).
 
 Sin framework, sin dependencias y sin proceso de build: son HTML, CSS y un
@@ -159,7 +159,7 @@ Lo que falta hacer fuera del código:
 | WhatsApp | +54 9 3364 56-4114 |
 | Correo | callfire.seh@gmail.com |
 | Zona | Villa Constitución, Santa Fe y alrededores |
-| Responsable técnico | Lic. Nicolás Bastianelli |
+| Técnico en Higiene y Seguridad | Téc. Nicolás Bastianelli |
 
 Para cambiar el número de WhatsApp hay que tocarlo en tres lugares: los dos
 enlaces `wa.me` de `index.html` y la constante `TELEFONO` en `assets/js/main.js`.
