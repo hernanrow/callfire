@@ -96,7 +96,23 @@ En escritorio el visitante baja 92 KB de fotos; en celular, 44 KB.
 los mismos nombres, y revisar el velo de esa sección (`.hero::before` o
 `.crossover::before`), que está calibrado para la foto actual.
 
-## Cuando haya dominio propio
+## El dominio
+
+El sitio vive en **callfire.com.ar**, registrado en NIC.ar, servido por
+Cloudflare Pages desde este repositorio. Cada `git push` a `main` republica.
+
+Si alguna vez hay que mover el sitio a otra dirección, `cambiar-dominio.py`
+reemplaza la dirección en los ocho lugares donde está escrita completa:
+
+```bash
+python cambiar-dominio.py https://otra-direccion.com/ --simular
+python cambiar-dominio.py https://otra-direccion.com/
+```
+
+**Ojo:** la firma de correo del kit de marca también apunta al dominio, y ese
+archivo vive fuera de este repositorio. El script no lo toca.
+
+## Referencia: el cambio de dominio anterior
 
 La dirección completa aparece en ocho lugares repartidos en tres archivos.
 Para no buscarlos a mano está `cambiar-dominio.py`:

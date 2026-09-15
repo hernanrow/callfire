@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hernanrow.github.io/callfire/sitemap.xml
+Sitemap: https://callfire.com.ar/sitemap.xml
