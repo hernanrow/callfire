@@ -140,10 +140,10 @@ Lo que falta hacer fuera del código:
 
 ## Pendientes antes de publicar
 
-- [ ] **Redes sociales.** En `index.html`, dentro de `<ul class="redes">`, los
-      enlaces están en `href="#"`. Reemplazar por las URL reales de Instagram,
-      Facebook, YouTube y TikTok. Si alguna red no se va a usar, borrar su
-      elemento `<li>` completo.
+- [x] **Redes sociales.** Instagram, YouTube y TikTok, enlazadas en la barra y
+      en el pie, y declaradas en `sameAs` dentro del bloque JSON-LD. **Facebook
+      se quitó**: no hay cuenta. Para sumarla hay que volver a poner su `<li>`
+      en los dos `<ul class="redes">` y agregar la URL al `sameAs`.
 - [ ] **Dominio.** Completar `<link rel="canonical">` y `og:image` con la URL
       absoluta del sitio (ej. `https://callfire.com.ar/assets/img/og-image.png`).
       Las rutas relativas funcionan igual, pero algunas redes muestran mejor la
